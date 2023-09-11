@@ -1,7 +1,8 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
+ * main - Print "with proper grammar, but the outcome is a piece of art,"
+ * followed by new line using printf
  *
  * Return: Always 0 (Success)
  */

@@ -23,6 +23,10 @@ int main(void)
 		{
 			printf("Fizz ");
 		}
+		else
+		{
+			printf("%d", (int)a);
+		}
 		printf("\n");
 	}
 	return (0);

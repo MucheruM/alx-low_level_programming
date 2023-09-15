@@ -25,12 +25,12 @@ int main(void)
 		}
 		else
 		{
-			printf("%d", a);
+			printf("%i", a);
 		}
 
-		if (a % 10 == 0)
+		if (a < 100)
 		{
-			printf("\n");
+			printf(" ");
 		}
 	}
 	return (0);

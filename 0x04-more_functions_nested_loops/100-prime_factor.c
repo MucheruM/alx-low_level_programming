@@ -10,7 +10,7 @@ int main(void)
 {
 	unsigned long int i, n;
 
-        n = 612852475143;
+	n = 612852475143;
 	i = 2;
 
 	while (i * i <= n)

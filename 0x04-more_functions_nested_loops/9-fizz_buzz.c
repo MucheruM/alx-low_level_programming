@@ -25,7 +25,7 @@ int main(void)
 		}
 		else
 		{
-			printf("%d", (int)a);
+			printf("%d", a);
 		}
 
 		if (a % 10 == 0)

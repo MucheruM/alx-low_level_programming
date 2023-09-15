@@ -27,7 +27,11 @@ int main(void)
 		{
 			printf("%d", (int)a);
 		}
-		printf("\n");
+
+		if (a % 10 == 0)
+		{
+			printf("\n");
+		}
 	}
 	return (0);
 }

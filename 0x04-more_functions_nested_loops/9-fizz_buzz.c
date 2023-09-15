@@ -18,7 +18,7 @@ int main(void)
 		else if (a % 3 == 0 && a % 5 != 0)
 			printf("Fizz ");
 		else
-			printf("%d ", a);
+			printf("%d", a);
 		if (a != 100)
 			printf(" ");
 	}

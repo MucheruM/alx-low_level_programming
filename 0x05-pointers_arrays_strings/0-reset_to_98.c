@@ -2,7 +2,7 @@
 
 /**
  * reset_to_98 - Take a pointer and update the value it points
- * @int *n: Parameter
+ * *n: Pointer changing the value
  * Return: void
  */
 void reset_to_98(int *n)

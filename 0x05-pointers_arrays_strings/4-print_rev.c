@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _print_rev - Print a string to the stdout
+ * print_rev - Print a string to the stdout
  * @s: String to be printed in rev
  * Return: void
  */

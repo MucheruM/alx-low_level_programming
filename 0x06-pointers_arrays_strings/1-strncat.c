@@ -15,7 +15,7 @@ char *_strncat(char *dest, char *src, int n)
 		dest_len++;
 
 	for (src_len = 0; src_len < n && src[src_len] != '\0'; src_len++)
-		dest[dest_len + src_len] = src[src_len];
+		dest[dest_len + src_len] = src[src_len]; /* n is the max num */
 
 	return (dest);
 }

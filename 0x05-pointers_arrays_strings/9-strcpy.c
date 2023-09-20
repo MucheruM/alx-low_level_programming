@@ -6,7 +6,7 @@
  * @src: char to check
  * Return: char
  */
-char *_strcpy(char *dest, char *src)
+char *_strcpy(char *dest, char *src)/* fucnt takes two pointers copying src to dest */
 {
 	int a;
 

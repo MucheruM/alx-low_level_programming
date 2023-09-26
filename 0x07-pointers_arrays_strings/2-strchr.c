@@ -8,12 +8,21 @@
  */
 char *_strchr(char *s, char c)
 {
-	unsigned int str;
+	int x = 0, y;
 
-	for (str = 0; s[str] != '\0'; str++)
+	while (s[x]) /* iterate string to the 0 byte */
 	{
-		if (s[str] == c)
-			return (&s[str]);
+		x++;
 	}
+
+	for (y = 0; y <= x; y++) /* loop to check for c */
+	{
+		if (c == s[y])
+		{
+			s += y; /* adds string to first occurence of c */
+			return (s);
+		}
+	}
+
 	return ('\0');
 }

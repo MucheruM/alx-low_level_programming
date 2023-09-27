@@ -12,6 +12,4 @@ void _print_rev_recursion(char *s)
 		_print_rev_recursion(s + 1); /* logic is recursive calls hapen*/
 		_putchar(*s); /*printing from the last char to first*/
 	}
-	else
-		_putchar('\n');
 }

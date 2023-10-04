@@ -21,7 +21,7 @@ char *argstostr(int ac, char **av)
 		for (arg2 = 0; av[arg1][arg2] != '\0'; arg2++)
 			size++; /* str @ pst [arg1] for char @ pst [arg2] */
 
-	conc_arg = malloc(size * sizeof(char)); /* allocate mem of conc strng */
+	conc_arg = malloc((size + 1) * sizeof(char)); /* allocate mem of conc strng */
 	if (conc_arg == NULL)
 		return (NULL);
 	y = 0; /* keep track of the new string we currntly add char */

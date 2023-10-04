@@ -16,7 +16,7 @@ char *argstostr(int ac, char **av)
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
-	size = ac - 1; /* calc size of conc strng */
+	size = ac; /* calc size of conc strng */
 	for (arg1 = 0; arg1 < ac; arg1++)
 		for (arg2 = 0; av[arg1][arg2] != '\0'; arg2++)
 			size++; /* str @ pst [arg1] for char @ pst [arg2] */

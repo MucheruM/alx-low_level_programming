@@ -13,21 +13,22 @@ char **strtow(char *str)
 	char *word, *str_cpy, *saveptr; /* hold words,cpy, ptr for strtok_r */
 	int count = 0; /* count no of wrds in str */
 	unsigned int i, j; /* use for loop counters */
+	size_t len;
 
 	if (str == NULL || *str == '\0')
 		return (NULL); /* str properly init in mem & str ! '\0' */
 	str_cpy = strdup(str); /* preserve org str and mem managemnt */
 	if (str_cpy == NULL)
 		return (NULL);
-	for (i = 0; i < strlen(str_cpy); i++) /* iterat strng mnitord with i */
+	len = strlen(str_cpy);
+	for (i = 0; i < len; i++) /* iterat strng mnitord with i */
 	{ /* lst str ! space && i is 1st char || prev char is space */
 		if (str_cpy[i] != ' ' && (i == 0 || str[i - 1] == ' '))
 			count++;
 	}
-/* create mem of strn + 1 byte for the '\0' */
 	words = malloc((count + 1) * sizeof(char *));
 	if (words == NULL) /* chck if strng is init in mem */
-	{
+	{ /* create mem of strn + 1 byte for the '\0' */
 		free(str_cpy);
 		return (NULL);
 	} /* reentrant */
@@ -40,13 +41,12 @@ char **strtow(char *str)
 			for (j = 0; j < i; j++) /* iterate str */
 				free(words[j]); /* free their mem */
 			free(words); /* free mem incase depletes */
-			words = (NULL);
-			break;
+			free(str_cpy);
+			return (NULL);
 		}
 		word = strtok_r(NULL, " ", &saveptr);
 	}
-	if (words != NULL)
-		words[i] = NULL;
+	words[i] = NULL;
 	free(str_cpy);
 	return (words);
 }

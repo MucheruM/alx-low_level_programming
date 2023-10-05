@@ -4,7 +4,7 @@
  * *array_range - function that creates an array of int
  * @min: smallest value in the array
  * @max: largest value in the array
- * Result: pointer to an array of int
+ * Return: pointer to an array of int
  */
 int *array_range(int min, int max)
 {

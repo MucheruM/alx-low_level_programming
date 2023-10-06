@@ -3,6 +3,29 @@
 #include <string.h>
 
 /**
+ * count_word - helper function to count the # of words in str
+ * @str: string to evaluate
+ * Return: number of words
+ */
+int count_word(char *str)
+{
+	int flag = 0;
+	int w = 0, i;
+
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		if (str[i] == ' ')
+			flag = 0;
+		else if (flag == 0)
+		{
+			flag = 1;
+			w++;
+		}
+	}
+	return (w);
+}
+
+/**
  * **strtow - string tokenize function
  * @str: recieves input as a pointer to a string
  * Return: a pointer to a pointer of a character
@@ -11,21 +34,16 @@ char **strtow(char *str)
 {
 	char **words; /* stor words from str */
 	char *word, *str_cpy, *saveptr; /* hold words,cpy, ptr for strtok_r */
-	int count = 0; /* count no of wrds in str */
+	int count; /* count no of wrds in str */
 	unsigned int i, j; /* use for loop counters */
-	size_t len;
 
 	if (str == NULL || *str == '\0')
 		return (NULL); /* str properly init in mem & str ! '\0' */
 	str_cpy = strdup(str); /* preserve org str and mem managemnt */
 	if (str_cpy == NULL)
 		return (NULL);
-	len = strlen(str_cpy);
-	for (i = 0; i < len; i++) /* iterat strng mnitord with i */
-	{ /* lst str ! space && i is 1st char || prev char is space */
-		if (str_cpy[i] != ' ' && (i == 0 || str[i - 1] == ' '))
-			count++;
-	}
+	count = count_word(str_cpy); /* count word fnction */
+
 	words = malloc((count + 1) * sizeof(char *));
 	if (words == NULL) /* chck if strng is init in mem */
 	{ /* create mem of strn + 1 byte for the '\0' */

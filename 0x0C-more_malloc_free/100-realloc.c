@@ -3,7 +3,8 @@
 
 /**
  * *_realloc - reallocated mem block using malloc and free
- * @old_siz: previous assigned mem space size
+ * @ptr: pointer that we want to reallocated mem
+ * @old_size: previous assigned mem space
  * @new_size: the mem space we want to assign
  * Return: a pointer of anytype we choose
  */

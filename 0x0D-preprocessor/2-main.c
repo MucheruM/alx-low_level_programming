@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 /**
 * main - print name where file is compiled from using _FILE_
@@ -7,7 +6,7 @@
 */
 int main(void)
 {
-	printf(" %s\n", __FILE__);
+	printf("%s\n", __FILE__);
 
 	return (0);
 }

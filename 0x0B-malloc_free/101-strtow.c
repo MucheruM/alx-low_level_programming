@@ -91,4 +91,5 @@ void free_words(char **words)
 		free(words[i]);
 
 	free(words);
+	words = NULL;
 }

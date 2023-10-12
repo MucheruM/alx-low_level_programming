@@ -23,6 +23,10 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	{
 		num_list = va_arg(num, unsigned int);
 		printf("%d", num_list);
+		if (separator == NULL)
+		{
+			;
+		}
 		if (i < n - 1)
 			printf("%s", separator);
 	}

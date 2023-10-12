@@ -27,7 +27,7 @@ int main(int argc, char **argv)
 	if (func == 0) /* same as !func */
 	{
 		printf("Error\n");
-		exit(98);
+		exit(99);
 	}
 
 	op = *argv[2];

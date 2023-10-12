@@ -3,8 +3,9 @@
 #include "3-calc.h"
 
 /**
- *
- *
+ * *get_op_func - Function operating like a switch statement
+ * @s: Operation
+ * Return: int value
  */
 int (*get_op_func(char *s))(int, int)
 {

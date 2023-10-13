@@ -9,7 +9,8 @@
  */
 void print_all(const char * const format, ...)
 {
-	unsigned int i;
+	int i;
+	int c_ctrl;
 	va_list arr;
 	char *s;
 
@@ -21,23 +22,28 @@ void print_all(const char * const format, ...)
 		{
 		case 'c':
 			printf("%c", va_arg(arr, int));
+			c_ctrl = 0;
 			break;
 		case 'i':
 			printf("%d", va_arg(arr, int));
+			c_ctrl = 0;
 			break;
 		case 'f':
 			printf("%f", va_arg(arr, double));
+			c_ctrl = 0;
 			break;
 		case 's':
+			s = va_arg(arr, char*);
 			if (s == NULL)
 				s = "(nil)";
-			printf("%s", va_arg(arr, char*));
+			printf("%s", s);
+			c_ctrl = 0;
 			break;
 		default:
-			i++;
-			continue;
+			c_ctrl = 1;
+			break;
 		}
-		if (format[i + 1] != '\0')
+		if (format[i + 1] != '\0' && c_ctrl == 0)
 			printf(", ");
 		i++;
 	}

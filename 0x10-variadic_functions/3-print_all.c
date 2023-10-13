@@ -33,6 +33,9 @@ void print_all(const char * const format, ...)
 				s = "(nil)";
 			printf("%s", va_arg(arr, char*));
 			break;
+		default:
+			i++;
+			continue;
 		}
 		if (format[i + 1] != '\0')
 			printf(", ");

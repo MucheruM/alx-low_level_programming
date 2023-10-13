@@ -9,8 +9,7 @@
  */
 void print_all(const char * const format, ...)
 {
-	int i;
-	int c_ctrl;
+	int i, c_ctrl;
 	va_list arr;
 	char *s;
 
@@ -48,6 +47,5 @@ void print_all(const char * const format, ...)
 		i++;
 	}
 	printf("\n");
-
 	va_end(arr);
 }

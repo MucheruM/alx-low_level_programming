@@ -3,7 +3,7 @@
 
 /**
  * print_listint - A function that prints all the elements of a listint_t
- * @listint_t - This is where the values received are stored (our linked list)
+ * @h: This is where the values received are stored (our linked list)
  * Return: The number of nodes 'sizez_t'
  */
 size_t print_listint(const listint_t *h)

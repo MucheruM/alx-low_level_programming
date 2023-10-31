@@ -1,4 +1,6 @@
+#include <stdio.h>
 #include "main.h"
+
 /**
   * main - copy one file to another.
   * @argc: number of arg in the Cl.

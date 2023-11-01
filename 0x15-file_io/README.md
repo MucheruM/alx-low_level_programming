@@ -11,7 +11,7 @@ returns the actual number of letters it could read and print
 if the file can not be opened or read, return 0
 if filename is NULL return 0
 if write fails or does not write the expected amount of bytes, return 0
-julien@ubuntu:~/0x15. File descriptors and permissions$ cat Requiescat 
+julien@ubuntu:~/0x15. File descriptors and permissions$ cat Requiescat
 Requiescat
 by Oscar Wilde
 
@@ -103,13 +103,13 @@ All my life's buried here,
 Heap earth upon it.
 
 (printed chars: 468)
-julien@ubuntu:~/0x15. File descriptors and permissions$ 
+julien@ubuntu:~/0x15. File descriptors and permissions$
 Repo:
 
 GitHub repository: alx-low_level_programming
 Directory: 0x15-file_io
 File: 0-read_textfile.c
-   
+
 1. Under the snow
 mandatory
 Create a function that creates a file.
@@ -149,14 +149,14 @@ julien@ubuntu:~/0x15. File descriptors and permissions$ ./b hello world
 -> 1)
 julien@ubuntu:~/0x15. File descriptors and permissions$ ls -l hello
 -rw------- 1 julien julien 5 Dec  3 14:28 hello
-julien@ubuntu:~/0x15. File descriptors and permissions$ cat hello 
-worldjulien@ubuntu:~/0x15. File descriptors and permis$ 
+julien@ubuntu:~/0x15. File descriptors and permissions$ cat hello
+worldjulien@ubuntu:~/0x15. File descriptors and permis$
 Repo:
 
 GitHub repository: alx-low_level_programming
 Directory: 0x15-file_io
 File: 1-create_file.c
-   
+
 2. Speak gently, she can hear
 mandatory
 Write a function that appends text at the end of a file.

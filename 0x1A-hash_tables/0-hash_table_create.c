@@ -22,7 +22,8 @@ hash_table_t *hash_table_create(unsigned long int size)
 		free(hash_t);
 		return (NULL);
 	}
-	for (j = 0; j < size; j++)
+	hash_t->array[0] = NULL;
+	for (j = 1; j < size; j++)
 		hash_t->array[j] = NULL;
 	return (hash_t);
 }

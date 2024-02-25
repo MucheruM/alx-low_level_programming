@@ -14,6 +14,6 @@ void _puts_recursion(char *s)
 	} /* util the '\0' is reached */
 	else /* important coz after '\0' reached '\n' printed */
 	{
-		_putchar('\n');
+		_putchar('\n'); /* prints new line after the code */
 	}
 }

@@ -1,0 +1,26 @@
+CC = gcc
+SRC = main.c school.c
+OBJ = $(SRC:%.c=%.o)
+NAME = school
+RM = rm
+CFLAGS = -Wall -Werror -Wextra -pedantic
+
+.PHONY: all clean oclean fclean re
+
+# link object files and create the executable
+all: m.h ${OBJ}
+	${CC} ${OBJ} -o ${NAME}
+
+# deletes all emacs temp files
+clean:
+	-${RM} -f *~ ${NAME}
+
+# deletes all obj files 
+oclean:
+	-$(RM) -f ${OBJ}
+
+# cleans all temp and obj files
+fclean: oclean clean
+
+# forces the recompilation 
+re: oclean all
